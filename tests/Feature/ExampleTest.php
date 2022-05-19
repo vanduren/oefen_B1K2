@@ -18,4 +18,12 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    // public function test_the_application_returns_a_successful_response_with_a_view()
+    // {
+    //     $response = $this->get('/');
+
+    //     $response->assertViewIs('welcome');
+    // }
+
 }
