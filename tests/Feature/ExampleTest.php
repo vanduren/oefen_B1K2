@@ -8,6 +8,9 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    // dit zorgt voor een fresh migration na elke test (in de in memory test db)
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      *
@@ -40,7 +43,7 @@ class ExampleTest extends TestCase
      */
     public function test_that_gets_customers()
     {
-        $klanten = Klant::factory(10)->make();
+        $klanten = Klant::factory(10)->create();
         // make is create zonder save actie naar db
         $aantalKlanten = $klanten->count();
         $this->assertEquals(10, $aantalKlanten);
