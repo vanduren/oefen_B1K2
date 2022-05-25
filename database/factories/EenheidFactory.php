@@ -16,7 +16,7 @@ class EenheidFactory extends Factory
      */
     public function definition()
     {
-        $eenheid = ['gram', 'liter', 'stuk', 'pak', 'kilo', 'stuks'];
+        $eenheid = ['stuks', 'rol', 'pallet'];
         return [
             'eenheid' => $this->faker->unique()->randomElement($eenheid),
         ];

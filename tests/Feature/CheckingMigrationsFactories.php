@@ -15,7 +15,7 @@ use App\Models\VoorraadRegel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class CheckingMigrationsFactories extends TestCase
 {
     // dit zorgt voor een fresh migration na elke test (in de in memory test db)
     use RefreshDatabase;
@@ -80,9 +80,9 @@ class ExampleTest extends TestCase
      */
     public function test_that_gets_measure_units()
     {
-        $eenheden = Eenheid::factory(5)->create();
+        $eenheden = Eenheid::factory(3)->create();
         $aantalEenheden = $eenheden->count();
-        $this->assertEquals(5, $aantalEenheden);
+        $this->assertEquals(3, $aantalEenheden);
     }
 
         /**
@@ -136,7 +136,7 @@ class ExampleTest extends TestCase
         Klant::factory(10)->create();
         Bestelling::factory(10)->create();
         Artikel::factory(10)->create();
-        Eenheid::factory(5)->create();
+        Eenheid::factory(3)->create();
         $bestellingRegels = BestellingRegel::factory(10)->create();
         $aantalBestellingRegels = $bestellingRegels->count();
         $this->assertEquals(10, $aantalBestellingRegels);
@@ -150,7 +150,7 @@ class ExampleTest extends TestCase
     public function test_that_gets_supplylines()
     {
         Artikel::factory(10)->create();
-        Eenheid::factory(5)->create();
+        Eenheid::factory(3)->create();
         $voorraadRegels = VoorraadRegel::factory(10)->create();
         $aantalVoorraadRegels = $voorraadRegels->count();
         $this->assertEquals(10, $aantalVoorraadRegels);

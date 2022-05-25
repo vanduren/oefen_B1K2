@@ -9,4 +9,15 @@ class Eenheid extends Model
 {
     use HasFactory;
     protected $table = 'eenheden';
+    protected $fillable = ['eenheid'];
+
+    public function artikelen()
+    {
+        return $this->hasMany(Artikel::class);
+    }
+
+    public function bestellingregels()
+    {
+        return $this->hasMany(BestellingRegel::class);
+    }
 }

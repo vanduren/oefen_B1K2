@@ -15,6 +15,27 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('bestelling.index')" :active="request()->routeIs('bestelling.index')">
+                        {{ __('bestellingen') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('bestellingregel.index')" :active="request()->routeIs('bestellingregel.index')">
+                        {{ __('Bestelregels') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('voorraadregel.index')" :active="request()->routeIs('voorraadregel.index')">
+                        {{ __('Voorraad') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('artikel.index')" :active="request()->routeIs('artikel.index')">
+                        {{ __('Artikelen') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('eenheid.index')" :active="request()->routeIs('eenheid.index')">
+                        {{ __('Eenheden') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('klant.index')" :active="request()->routeIs('klant.index')">
+                        {{ __('Klanten') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('leverancier.index')" :active="request()->routeIs('leverancier.index')">
+                        {{ __('Leveranciers') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -9,4 +9,10 @@ class Klant extends Model
 {
     use HasFactory;
     protected $table = 'klanten';
+    protected $fillable = ['bedrijfsnaam', 'contactpersoon', 'telefoonnummer'];
+
+    public function bestellingen()
+    {
+        return $this->hasMany(Bestelling::class);
+    }
 }

@@ -9,4 +9,10 @@ class Leverancier extends Model
 {
     use HasFactory;
     protected $table = 'leveranciers';
+    protected $fillable = ['bedrijfsnaam', 'contactpersoon', 'telefoonnummer', 'emailadres'];
+
+    public function levert()
+    {
+        return $this->belongsToMany(Artikel::class, 'leverancier_artikel_regels', 'leverancier_id', 'artikel_id');
+    }
 }
